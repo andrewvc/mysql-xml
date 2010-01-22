@@ -1,0 +1,12 @@
+#Provides an easy way to parse XML output from mysql -X.
+#MySQLXML::parse takes an IO object for the XML and a block that gets called
+#once for each record. The records are represented as hashes keyed by string
+#representations of column names.
+#
+#Example:
+#  MySQLXML::parse(File.new('test.xml')) do |record|
+#    puts record['username']
+#  end
+#
+#This uses REXML's stream parser, so it should be reasonably
+#memory efficient.
